@@ -129,10 +129,10 @@ a{
     padding: 10px 0;
   }
 
-
 .nav--menubar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-brand img{
@@ -193,12 +193,13 @@ a{
   width: 20px;
 }
 
-.nav--menu.hidden{
-  display: none;
-}
-
 .nav--menu{
   text-align: center;
+      display: none;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease-out, height 0.5s ease-out;
 }
 
 .nav--link{
