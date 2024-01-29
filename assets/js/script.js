@@ -9,10 +9,14 @@ iconMenu.addEventListener('click', function(){
 		navMenu.style.display = 'block';
 		navMenu.style.height = 'auto';
 		navMenu.style.opacity = '1';
+		iconMenu.setAttribute('aria-expanded', 'true');
+		iconMenu.setAttribute('aria-hidden', 'false');
 	} else {
 		navMenu.style.display = 'none';
 		navMenu.style.height = '0';
 		navMenu.style.opacity = '0';
+		iconMenu.setAttribute('aria-expanded', 'false');
+		iconMenu.setAttribute('aria-hidden', 'true');
 	}
 });
 
@@ -23,15 +27,21 @@ function toggleMenu() {
 			navMenu.style.display = 'flex';
 			navMenu.style.height = 'auto';
 			navMenu.style.opacity = '1';
+			iconMenu.setAttribute('aria-expanded', 'true');
+      iconMenu.setAttribute('aria-hidden', 'false');
 		} else {
 			navMenu.style.display = 'none';
 			navMenu.style.height = '0';
 			navMenu.style.opacity = '0';
+			iconMenu.setAttribute('aria-expanded', 'false');
+			iconMenu.setAttribute('aria-hidden', 'true');
 		}
 	} else {
 		navMenu.style.display = 'none';
 		navMenu.style.height = '0';
 		navMenu.style.opacity = '0';
+		iconMenu.setAttribute('aria-expanded', 'false');
+		iconMenu.setAttribute('aria-hidden', 'true');
 	}
 }
 
